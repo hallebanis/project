@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head title="Myfirst HTML Coding project">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="res/icone.ico" type="image/x-icon" />
+  </head>
+  <!--Formulaire d'inscription 
+    ou nous allons tester differentes composantes-->
+  <body style="background-color: rgb(119, 17, 57)">
+    <header style="background-color: rgb(119, 17, 57)">
+      <nav>
+        <table>
+          <tr>
+            <td width="100">
+              <u><a href="index.html">Acceuil</a></u>
+            </td>
+            <td width="100"><a href="Apropos.html">A propos</a></td>
+            <td width="100"><a href="RegisterForm.html">Register</a></td>
+            <td width="2000" align="right">
+              <img src="res/logo.png" width="400" height="150" />
+            </td>
+          </tr>
+        </table>
+      </nav>
+    </header>
+    <main>
+      <h1>Formulaire d'inscription</h1>
+      <form>
+        <hr />
+
+        <fieldset
+          name="groupe1"
+          id="groupe1"
+          style="background-color: whitesmoke"
+        >
+          <legend><h5>Veuillez remplir le formulaire</h5></legend>
+          <label for="Nom">Nom</label>
+          <input type="text" name="Nom" id="Nom" />
+          &nbsp;
+          <label for="Prenom">Prenom</label>
+          <input type="text" name="Prenom" id="Prenom" />
+          <br />
+          <br />
+          <label for="date">date de naissance</label>
+          <input type="date" id="date" name="date" />
+          <fieldset>
+            <legend>Genre</legend>
+            <input type="radio" id="Homme" name="genre" />
+            <label for="Homme">Homme</label>
+            <br />
+            <input type="radio" id="Femme" name="genre" />
+            <label for="Femme">Femme</label>
+            <label for="adresse">Adresse</label>
+          </fieldset>
+          <br />
+          <div>
+            <textarea
+              name="adresse"
+              id="adresse"
+              placeholder="Tapez votre adresse"
+            ></textarea>
+          </div>
+          <div>
+              <p>Formation Souhaitée</p>
+              <label for="formation">Veuillez choisir une formation</label>
+              <select name="formation" id="formation">
+                  <option>Gateaux 3D</option>
+                  <option>Macaron</option>
+                  <option>Mignardise</option>
+              </select>
+          </div>
+          <div>
+              <input type="submit" value="Valider">
+              <input type="reset" value="Effacer"
+          </div>
+        </fieldset>
+      </form>
+    </main>
+    <footer></footer>
+  </body>
+</html>
