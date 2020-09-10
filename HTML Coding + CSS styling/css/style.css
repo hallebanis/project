@@ -1,0 +1,163 @@
+
+.presentation-div > div {
+  display: inline-block;
+}
+.presentation-div {
+  display: inline;
+  margin-left: 30%;
+}
+#logo {
+  width: 200px;
+}
+.div-header {
+  width: 500px;
+  display: table-cell;
+  vertical-align: top;
+  
+}
+#slogan {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 19pt;
+}
+#siteDesc {
+  font-family: "Playfair Display", serif;
+  font-size: 16pt;
+}
+.flex-menu-div > .flex-Menu {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+.flex-Menu > li {
+  font-size: 14pt;
+  padding: 0 10px;
+  margin-left: 40px;
+  color: black;
+  border-bottom-width: 1px;
+}
+.flex-Menu > li * {
+  color: black;
+}
+.flex-Menu > li *:hover {
+  color: slateblue;
+}
+.MainContainer {
+  height: 500px;
+  background-image: url(/res/background2.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  
+}
+#PresentationDiv {
+  width: 400px;
+  display: inline-block;
+}
+#TitleDiv {
+  padding-top: 200px;
+}
+#Decouvrir {
+  background-color: transparent;
+  font-family: fantasy;
+  display: inline-block;
+  border-style: inset;
+  margin-left: 30px;
+}
+
+.MultimediaDiv {
+  width: 100%;
+
+  display: inline-block;
+}
+.ArticleDiv {
+  border: solid;
+  border-color: black;
+  display: inline-block;
+  width: 20%;
+  margin-top: 10px;
+  padding-top: 10px;
+  overflow: scroll;
+  border-width: thin;
+}
+/*   .VideoDiv{
+        border: solid;
+        border-color: tomato;
+        display: inline-block;
+    }*/
+.MultimediaDiv * {
+  display: inline-block;
+}
+#ArticleText {
+  /* border: solid;*/
+  display: block;
+  width: 20%;
+}
+/* STyle pour Formulaire d'inscription*/
+.Dejainscrit {
+  background-color: rgb(212, 209, 209);
+  font-size: medium;
+}
+
+.Dejainscrit > a {
+  color: rgb(165, 42, 83);
+}
+.informationpersonelle {
+  display: inline-block;
+  /*width: 50%;*/
+  border: solid;
+  border-width: thin;
+}
+.informationpersonelle * {
+  margin-bottom: 20px;
+  font-size: 20px;
+  display: block;
+}
+.InformationSupplementaire * {
+  margin-top: 30px;
+  font-size: 20px;
+  display: block;
+}
+#NoteComplementaire {
+  width: 400px;
+  height: 100px;
+}
+.ConditionsGenrales {
+  display: inline-block;
+  width: 40%;
+  height: 200px;
+  border: solid;
+  border-width: thin;
+  position: absolute;
+  top: 69%;
+  margin-left: 20px;
+  background-color: rgb(226, 223, 223);
+}
+
+.InscriptionDiv {
+  display: inline-block;
+  width: 1000px;
+  height: 500px;
+
+}
+
+footer{
+  margin-top: 20px;
+  background-color: rgb(206, 201, 201);
+  height: 20vh;
+}
+#BasDePage{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(50,-50%);
+  font-size: xx-large;
+  color: black;
+}
+.btn{
+  margin-top: 10px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-right: 10px ;
+}
+/*position absolute top:50% left 50% transform: translate (-50%,-50%)*/
