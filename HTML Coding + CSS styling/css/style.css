@@ -5,6 +5,10 @@
 .presentation-div {
   display: inline;
   margin-left: 30%;
+  position: relative;
+}
+.presentation-div *{
+  position: sticky;
 }
 #logo {
   width: 200px;
