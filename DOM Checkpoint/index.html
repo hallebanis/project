@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="https://use.fontawesome.com/c560c025cf.js"></script>
+    <script src="/js/script.js"></script>
+    <div class="container">
+      <div class="card shopping-cart">
+        <div class="card-header bg-dark text-light">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          Shipping cart
+
+          <div class="clearfix"></div>
+        </div>
+        <div class="card-body" id="card-body1">
+          <!-- PRODUCT 1 -->
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-2 text-center">
+              <img
+                class="img-responsive"
+                src="./res/img1.jpg"
+                alt="prewiew"
+                width="120"
+                height="80"
+              />
+            </div>
+            <div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
+              <h4 class="product-name"><strong>Product One</strong></h4>
+              <h4>
+                <small>Product description</small>
+              </h4>
+            </div>
+            <div
+              class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row"
+            >
+              <div
+                class="col-3 col-sm-3 col-md-6 text-md-right"
+                style="padding-top: 5px"
+              >
+                <h6>
+                  <strong
+                    ><span id="unitPrice1">13,000 </span
+                    ><span class="text-muted">x</span></strong
+                  >
+                </h6>
+              </div>
+              <div class="col-4 col-sm-4 col-md-4">
+                <div class="quantity">
+                  <input
+                    type="button"
+                    value="+"
+                    class="plus changeQte"
+                    onclick="incrementQty(iQT1);recalc()"
+                  />
+                  <input
+                    type="number"
+                    step="1"
+                    max="99"
+                    min="1"
+                    value="1"
+                    title="Qty"
+                    class="qty"
+                    size="4"
+                    id="qtyArt1"
+                    onclick="recalc()"
+                  />
+                  <input
+                    type="button"
+                    value="-"
+                    class="minus changeQte"
+                    onclick="decrementQty(iQT1);recalc()"
+                  />
+                </div>
+              </div>
+              <div class="col-2 col-sm-2 col-md-2 text-right">
+                <button type="button" class="btn btn-outline-danger btn-xs" id="del1" onclick="rmArt(iA1);recalc()">
+                  <i class="fa fa-trash" aria-hidden="true"></i>
+                </button>
+                <button type="button" class="btn btn-outline-danger" onclick="addWishList(iA1)">
+                  <i class="fa fa-heart mr-1"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <!-- END PRODUCT1 -->
+          <!-- PRODUCT2 -->
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-2 text-center">
+              <img
+                class="img-responsive"
+                src="./res/img2.jpg"
+                alt="prewiew"
+                width="120"
+                height="80"
+              />
+            </div>
+            <div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
+              <h4 class="product-name"><strong>Product two</strong></h4>
+              <h4>
+                <small>Product description</small>
+              </h4>
+            </div>
+            <div
+              class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row"
+            >
+              <div
+                class="col-3 col-sm-3 col-md-6 text-md-right"
+                style="padding-top: 5px"
+              >
+                <h6>
+                  <strong
+                    ><span id="unitPrice2">25,000</span
+                    ><span class="text-muted">x</span></strong
+                  >
+                </h6>
+              </div>
+              <div class="col-4 col-sm-4 col-md-4">
+                <div class="quantity">
+                  <input
+                    type="button"
+                    value="+"
+                    class="plus changeQte"
+                    onclick="incrementQty(iQT2);recalc()"
+                  />
+                  <input
+                    type="number"
+                    step="1"
+                    max="99"
+                    min="1"
+                    value="1"
+                    title="Qty"
+                    class="qty"
+                    size="4"
+                    id="qtyArt2"
+                    onclick="recalc()"
+                  />
+                  <input
+                    type="button"
+                    value="-"
+                    class="minus changeQte"
+                    onclick="decrementQty(iQT2);recalc()"
+                  />
+                </div>
+              </div>
+              <div class="col-2 col-sm-2 col-md-2 text-right">
+                <button type="button" class="btn btn-outline-danger btn-xs" id="del2" onclick="rmArt(iA2);recalc()">
+                  <i class="fa fa-trash" aria-hidden="true"></i>
+                </button>
+                <button type="button" class="btn btn-outline-danger" onclick="addWishList(iA2)">
+                  <i class="fa fa-heart mr-1"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <!-- END PRODUCT2 -->
+          <!-- PRODUCT3 -->
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-2 text-center">
+              <img
+                class="img-responsive"
+                src="./res/img3.jpg"
+                alt="prewiew"
+                width="120"
+                height="80"
+              />
+            </div>
+            <div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
+              <h4 class="product-name"><strong>Product three</strong></h4>
+              <h4>
+                <small>Product description</small>
+              </h4>
+            </div>
+            <div
+              class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row"
+            >
+              <div
+                class="col-3 col-sm-3 col-md-6 text-md-right"
+                style="padding-top: 5px"
+              >
+                <h6>
+                  <strong
+                    ><span id="unitPrice3">28.000</span>
+                    <span class="text-muted">x</span></strong
+                  >
+                </h6>
+              </div>
+              <div class="col-4 col-sm-4 col-md-4">
+                <div class="quantity">
+                  <input
+                    type="button"
+                    value="+"
+                    class="plus changeQte"
+                    onclick="incrementQty(iQT3);initTxtNum();recalc()"
+                  />
+                  <input
+                    type="number"
+                    step="1"
+                    max="99"
+                    min="1"
+                    value="1"
+                    title="Qty"
+                    class="qty"
+                    size="4"
+                    id="qtyArt3"
+                    onclick="recalc()"
+                  />
+                  <input
+                    type="button"
+                    value="-"
+                    class="minus changeQte"
+                    onclick="decrementQty(iQT3);recalc()"
+                  />
+                </div>
+              </div>
+              <div class="col-2 col-sm-2 col-md-2 text-right">
+                <button type="button" class="btn btn-outline-danger btn-xs" id="del3" onclick="rmArt(iA3);recalc()">
+                  <i class="fa fa-trash" aria-hidden="true" ></i>
+                </button>
+                <button type="button" class="btn btn-outline-danger" onclick="addWishList(iA3)">
+                  <i class="fa fa-heart mr-1"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <!-- END PRODUCT3 -->
+          <div class="pull-right">
+            <input
+              type="reset"
+              class="btn btn-outline-secondary pull-right"
+              onclick="resetQte()"
+            />
+          </div>
+        </div>
+          <div class="pull-right" style="margin: 10px">
+            <a href="" class="btn btn-success pull-right">Checkout</a>
+            <div class="pull-right" style="margin: 5px">
+              Total price: <span id="totalPrice"><b>00.000TND</b></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script lang="javascript">
+      var nClick=0;
+      var arr=new Array();
+      var txtNum3=document.getElementById("qtyArt3");
+      var txtNum2=document.getElementById("qtyArt2");
+      var txtNum1=document.getElementById("qtyArt1");
+      var unitP1=document.getElementById("unitPrice1");
+      var unitP2=document.getElementById("unitPrice2");
+      var unitP3=document.getElementById("unitPrice3");
+      var tP=document.getElementById("totalPrice");
+      var btn=document.getElementsByClassName("changeQte");
+      var iQT1=txtNum1.id;
+      var iQT2=txtNum2.id;
+      var iQT3=txtNum3.id;
+      function recalc(){
+      var txtNum3=document.getElementById("qtyArt3");
+      var txtNum2=document.getElementById("qtyArt2");
+      var txtNum1=document.getElementById("qtyArt1");
+      var unitP1=document.getElementById("unitPrice1");
+      var unitP2=document.getElementById("unitPrice2");
+      var unitP3=document.getElementById("unitPrice3");
+      if(txtNum1!=null)
+      arr[0]=[parseInt(txtNum1.value),parseInt(unitP1.textContent)];
+      else
+      arr[0]=[0,0];
+      if(txtNum2!=null)
+      arr[1]=[parseInt(txtNum2.value),parseInt(unitP2.textContent)];
+      else
+      arr[1]=[0,0];
+      if(txtNum3!=null)
+      arr[2]=[parseInt(txtNum3.value),parseInt(unitP3.textContent)];
+      else
+      arr[2]=[0,0];
+      tP.textContent=total(arr)+".000TND";}
+
+      recalc();
+      function rmArt(artId){
+        var rmDiv=document.getElementById(artId).parentNode.parentNode.parentNode;
+         var rmParent=rmDiv.parentNode;
+         rmParent.removeChild(rmDiv);
+         recalc();
+      }
+
+      function addWishList(artId){
+        var wishDiv=document.getElementById(artId).parentNode.parentNode.parentElement;
+        nClick++;
+        if(nClick%2==1)
+        wishDiv.style.backgroundColor="rgb(255,164,255)";
+        else
+        wishDiv.style.backgroundColor="rgb(255,255,255)";
+
+      }
+
+      function resetQte(){
+      var txtNum3=document.getElementById("qtyArt3");
+      var txtNum2=document.getElementById("qtyArt2");
+      var txtNum1=document.getElementById("qtyArt1");
+      if(txtNum1!=null)  
+      txtNum1.setAttribute('value','1');
+      if(txtNum2!=null)
+        txtNum2.setAttribute('value','1');
+      if(txtNum3!=null)
+        txtNum3.setAttribute('value','1');
+        recalc();
+      }
+      function initTxtNum(){
+      var txtNum3=document.getElementById("qtyArt3");
+      var txtNum2=document.getElementById("qtyArt2");
+      var txtNum1=document.getElementById("qtyArt1");
+     }
+      var idA1=document.getElementById("del1");
+      var idA2=document.getElementById("del2");
+      var idA3=document.getElementById("del3");
+      iA3=idA3.id;
+      iA2=idA2.id;
+      iA1=idA1.id;
+
+      function incrementQty(artId) {
+        var txtNum=document.getElementById(artId);
+        var num = parseInt(txtNum.getAttribute("value"));
+        num++;
+        txtNum.setAttribute("value", num);
+        txtNum.texContent = num;
+}
+
+function decrementQty(artId) {
+  var txtNum=document.getElementById(artId);
+  var num = parseInt(txtNum.getAttribute("value"));
+  var num = parseInt(txtNum.value);
+  if (num > 1) num--;
+  txtNum.setAttribute("value", num);
+}
+function total(arr) {
+  var sum = 0;
+  var arr1;
+  for (i in arr) {
+    if (arr[i] != [null, null]) {
+      arr1 = arr[i];
+      sum = sum + arr1[0] * arr1[1];
+    }
+  }
+  return sum;
+}
+
+    </script>
+  </body>
+</html>
