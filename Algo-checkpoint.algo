@@ -1,0 +1,41 @@
+ALGORITHM three-nb-add
+VAR
+    sentence:STRING;
+    i,j,sentenceLength,nbWords,nbVowels:INTEGER;
+    c:CHAR;
+
+BEGIN
+  read(sentence);
+  //determine the length of the sentence
+  sentenceLength:=0;
+  c:=sentence[0];
+  WHILE (c!='.') DO
+      sentenceLength:=sentenceLength+1;
+      c:=sentence[sentenceLength];
+  END_WHILE
+  
+  //Number of words
+  FOR i FROM 0 TO sentencelength-1 DO
+      c:=sentence[i];
+      IF (c=" ") THEN
+        nbWords:=nbWords+1;
+      END_IF
+  END_FOR
+  nbWords:=nbWords+1;
+
+  //Number oj vowels
+  FOR j FROM 0 TO sentenceLength-1 DO
+     c:=sentence[j];
+     SWITCH (c) DO
+         case 'a' : nbVowels:=nbVowels+1;break;
+         case 'e' : nbVowels:=nbVowels+1;break;
+         case 'i' : nbVowels:=nbVowels+1;break;
+         case 'o' : nbVowels:=nbVowels+1;break;
+         case 'u' : nbVowels:=nbVowels+1;break;
+         case 'y' : nbVowels:=nbVowels+1;break;
+     END_SWITCH
+  END_FOR
+  write("Sentence Length :",sentenceLength);
+  write("Number of words :",nbWords);
+  write("Number of vowels : ",nbVowels);
+END
