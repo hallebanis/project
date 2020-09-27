@@ -1,6 +1,6 @@
-ALGORITHM three-nb-add
+ALGORITHM ALGO-CHECKPOINT
 VAR
-    sentence:STRING;
+    sentence:STRING[100];
     i,j,sentenceLength,nbWords,nbVowels:INTEGER;
     c:CHAR;
 
