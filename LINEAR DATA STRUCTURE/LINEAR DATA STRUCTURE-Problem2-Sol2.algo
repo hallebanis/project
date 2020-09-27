@@ -1,0 +1,26 @@
+ALGORITHM Poblem1-Solution1 // In this solution we used HASH TABLE
+
+VAR
+arr1,arr2 : ARRAY_OF INTEGER[];
+sum,i:INTEGER;
+htab : HASH_TABLE<INTEGER,INTEGER>;
+BEGIN
+Read(arr1);
+Read(arr2);
+sum:=0;
+
+//SETTING UP htab ELEMENTS WITH THE FIRST SET
+FOR i FROM 0 TO arr1.length-1 DO
+    htab.insert(arr1[i],arr1[i]);
+    sum:=sum+arr1[i];
+END_FOR
+FOR i FROM 0 TO arr2.length-1 DO
+    IF (!htab.lookup(arr2[i])) THEN //IF THE ELEMENT DOES NOT EXIST IN Htab 
+        htab.delete(arr2[i]);
+        sum:=sum-arr2[i];
+    END_IF
+END_FOR
+sum:=sum*2; 
+write("sum : ",sum," distinct Element : ",htab);
+
+END

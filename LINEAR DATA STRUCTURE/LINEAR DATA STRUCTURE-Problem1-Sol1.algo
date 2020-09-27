@@ -1,0 +1,47 @@
+ALGORITHM Poblem1-Solution1 // In this solution we used only array type
+
+VAR
+arr1,arr2,arr3 : ARRAY_OF INTEGER[];
+sum,j,k:INTEGER;
+distinct:BOOLEAN;
+
+BEGIN
+Read(arr1);
+Read(arr2);
+sum:=0;
+distinct:=true;
+k:=0;
+//Check Array 1
+FOR i FROM 0 TO arr1.length-1 DO
+    j:=0;
+    WHILE (j<arr2.length && distinct:=true) DO
+        IF (arr1[i]=arr2[j]) THEN
+            distinct:=false;
+        ELSE
+            j:=j+1;
+        END_IF
+    END_WHILE
+    IF (distinct=true) THEN
+        arr3[k]:=arr1[i];
+        sum=sum+arr1[i];
+        k:=k+1;
+    END_IF
+END_FOR
+//check array 2
+FOR i FROM 0 TO arr2.length-1 DO
+    j:=0;
+    WHILE (j<arr1.length && distinct:=true) DO
+        IF (arr2[i]=arr1[j]) THEN
+            distinct:=false;
+        ELSE
+            j:=j+1;
+        END_IF
+    END_WHILE
+    IF (distinct=true) THEN
+        arr3[k]:=arr2[i];
+        sum=sum+arr2[i];
+        k:=k+1;
+    END_IF
+END_FOR
+write("sum : ",sum," distinct Element : ",arr3);
+END
