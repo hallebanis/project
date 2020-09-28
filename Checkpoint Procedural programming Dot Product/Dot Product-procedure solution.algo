@@ -1,0 +1,40 @@
+FUNCTION Are_Equal(arr1,arr2 : ARRAY_OF Number[];) : BOOLEAN
+VAR
+    
+BEGIN
+    RETURN (arr1.length=arr2.length) ;
+END
+
+PROCEDURE Dot_Product(arr1,arr2:array_name : ARRAY_OF Number[],VAR ps:Number)
+VAR
+    i:INTEGER;
+BEGIN
+    FOR i FROM 0 TO arr1.length DO
+        ps:=ps+(arr1[i]*arr2[i]);
+    END_FOR
+END
+
+ALGORITHM Principal
+VAR
+    arr1,arr2 : ARRAY_OF Number[];
+    PScalair:Number
+    n:INTEGER;
+BEGIN
+    write("How many pairs of vectors do you want to compare");
+    read(n);
+    FOR i FROM 1 TO n DO
+        read(arr1);
+        read(arr2);
+        IF (Are_Equal(arr1,arr2)) THEN
+            Dot_Product(arr1,arr2,PScalair);
+            IF (Pscalair=0) THEN
+                write (arr1," and ",arr2," are orthogonal");
+            ELSE
+                write (arr1," and ",arr2," are not orthogonal");
+            END_IF
+        ELSE
+            write (arr1," and ",arr2," have not same dimensions");       
+        END_IF
+    END_FOR
+    
+END
