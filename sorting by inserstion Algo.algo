@@ -1,0 +1,51 @@
+FUNCTION return_index(arr : ARRAY_OF type[50],val:INTEGER):INTEGER //return the exact position of a given value
+VAR
+    i,j:INTEGER;
+    done:BOOLEAN:=false;
+BEGIN
+IF (arr.length=0) THEN  //if the arrays is empty
+    RETURN(0);
+ELSE
+    i:=0; 
+    WHILE (i<arr.length && done=false) DO
+    IF (arr[i]<val) THEN
+        i:=i+1;
+    ELSE
+        RETURN(i);
+        done:=true;
+    END_IF
+    IF (i=arr.length-1 && done=false) THEN //last position
+        RETURN(i+1);
+    END_IF
+    END_WHILE
+END_IF
+END
+
+PROCEDURE insert_at_pos(var arr : ARRAY_OF INTEGER[50],pos,value:INTEGER)
+VAR
+    i:INTEGER;
+BEGIN
+    IF (pos<=arr.length-1 && pos>0) THEN  //IF it's not the first or the last element
+        i:=arr.length-1;
+        WHILE (i>pos) DO
+            arr[i+1]:=arr[i];
+            i:=i-1;
+        END_WHILE
+    END_IF
+    arr[pos]:=value;
+END
+
+ALGORITHM Selection_tri
+VAR
+    val,pos,n:INTEGER;
+    arr : ARRAY_OF INTEGER[50];
+BEGIN
+    write("How much element does the array conatains?")
+    read(n);
+    FOR i FROM 0 TO n DO
+        read(arr[i])
+    END_FOR
+    read(val);
+    pos:=return_index(arr,val);
+    insert_at_pos(arr,pos,val);
+END
