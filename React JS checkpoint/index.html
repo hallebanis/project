@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyFirstReact APP</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div id="root" class="container-fluid"></div>
+    <script type="text/babel">
+      const elm = (
+        <form>
+          <header>
+            <div class="container-fluid" id="header-div"></div>
+          </header>
+          <main>
+            <div class="container" id="main-div"></div>
+          </main>
+          <footer>
+            <div class="container-fluid" id="footer-div"></div>
+          </footer>
+        </form>
+      );
+      const HeaderElm = (
+        <div class="row">
+          <div class="col">
+            <img src="./src/logo.jpg" alt="Logo" />
+          </div>
+          <div class="col d-flex justify-content-end align-self-center">
+            <span>
+              <h5>
+                <a href="">Inscription</a>
+              </h5>
+            </span>
+          </div>
+        </div>
+      );
+      const mainElm = (
+        <div>
+          <h1>Inscription Form</h1>
+          <div class="row r1">
+            <div class="col">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="First name"
+              />
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Last name" />
+            </div>
+          </div>
+          <div class="row r1">
+            <div class="col-auto">
+              <label class="sr-only" for="inlineFormInput">
+                Name
+              </label>
+              <input
+                type="text"
+                class="form-control mb-2"
+                id="inlineFormInput"
+                placeholder="Jane Doe"
+              />
+            </div>
+            <div class="col-auto">
+              <label class="sr-only" for="inlineFormInputGroup">
+                Username
+              </label>
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">@</div>
+                </div>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inlineFormInputGroup"
+                  placeholder="example.com"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row r1">
+            <div class="col-auto">
+              <input
+                type="password"
+                class="form-control"
+                id="inputPassword"
+                placeholder="Password"
+              />
+            </div>
+            <div class="col-auto">
+              <input
+                type="password"
+                class="form-control"
+                id="inputPassword2"
+                placeholder="Confirm Password"
+              />
+            </div>
+          </div>
+          <div class="row r1">
+            <div class="col-4">
+              <label for="dtPicker">Please choose you birth date</label>
+              <input type="date" id="dtPicker" />
+            </div>
+            <div class="col-auto">
+              <div id="div-opt2">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="inlineRadioOptions"
+                  id="inlineRadio1"
+                  value="option1"
+                />
+                <label class="form-check-label" for="inlineRadio1">
+                  Male
+                </label>
+              </div>
+              <div id="div-opt2">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="inlineRadioOptions"
+                  id="inlineRadio2"
+                  value="option1"
+                />
+                <label
+                  class="form-check-label"
+                  id="LabelOpt2"
+                  for="inlineRadio2"
+                >
+                  Female
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="row r1">
+            <div classe="col-auto">
+              <label for="inputState">You are intersted in</label>
+              <select id="inputState" class="form-control">
+                <option selected>Choose...</option>
+                <option>aerospace programs</option>
+                <option value="Macanic">mechanical</option>
+                <option value="physical">physical</option>
+              </select>
+            </div>
+          </div>
+          <div class="row r1">
+            <div class="col-10">
+              <label for="inputAddress">Address</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inputAddress"
+                placeholder="1234 Main St"
+              />
+            </div>
+          </div>
+          <div class="row r1">
+            <div class="form-group col-md-6">
+              <label for="inputCity">City</label>
+              <input type="text" class="form-control" id="inputCity" />
+            </div>
+            <div class="form-group col-md-4">
+              <label for="inputState">Country</label>
+              <select id="inputState" class="form-control">
+                <option selected>Choose...</option>
+                <option>Tunisia</option>
+                <option value="">Algeria</option>
+                <option value="">Morocco</option>
+              </select>
+            </div>
+            <div class="form-group col-md-2">
+              <label for="inputZip">Zip</label>
+              <input type="text" class="form-control" id="inputZip" />
+            </div>
+          </div>
+          <div class="row r1">
+            <div class="col-auto">
+              <input
+                class="btn btn-primary btn1"
+                type="submit"
+                value="Submit"
+              />
+              <input class="btn btn-primary btn1" type="reset" value="Reset" />
+            </div>
+          </div>
+        </div>
+      );
+      const footerElm = (
+        <div class="container" id="footer-div" class="footer-div">
+          <p>Looking for a new start?? Subscribe in one of our programs</p>
+        </div>
+      );
+      ReactDOM.render(elm, document.getElementById("root"));
+      ReactDOM.render(HeaderElm, document.getElementById("header-div"));
+      ReactDOM.render(mainElm, document.getElementById("main-div"));
+      ReactDOM.render(mainElm, document.getElementById("main-div"));
+      ReactDOM.render(footerElm, document.getElementById("footer-div"));
+    </script>
+  </body>
+</html>
